@@ -23,7 +23,7 @@ class RuntimeconfigPlugin(plugins.SingletonPlugin):
             'ckan.datasets_per_page': [ignore_missing, is_positive_integer],
              
             #schemas
-            'scheming.dataset_schemas' : [ingore_missing, unicode],
+            'scheming.dataset_schemas' : [ignore_missing, unicode],
 
             # This is a custom configuration option
             'ckanext.example_iconfigurer.test_conf': [ignore_missing, unicode],
