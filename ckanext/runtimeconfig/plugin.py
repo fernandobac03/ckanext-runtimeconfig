@@ -16,7 +16,6 @@ class RuntimeconfigPlugin(plugins.SingletonPlugin):
 
         ignore_missing = toolkit.get_validator('ignore_missing')
         is_positive_integer = toolkit.get_validator('is_positive_integer')
-        url_validator = toolkit.get_validator('url_validator')
 
         schema.update({
             # This is an existing CKAN core configuration option, we are just
@@ -24,7 +23,7 @@ class RuntimeconfigPlugin(plugins.SingletonPlugin):
             'ckan.datasets_per_page': [ignore_missing, is_positive_integer],
              
             #schemas
-            'scheming.dataset_schemas' : [ignore_missing, url_validator],
+            'scheming.dataset_schemas' : [ignore_missing, unicode],
 
             # This is a custom configuration option
             'ckanext.example_iconfigurer.test_conf': [ignore_missing, unicode],
